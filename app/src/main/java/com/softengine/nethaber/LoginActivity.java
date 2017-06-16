@@ -1,5 +1,7 @@
 package com.softengine.nethaber;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -17,6 +19,7 @@ import com.softengine.nethaber.model.NewsModel;
 import com.softengine.nethaber.network.GetNews;
 import com.softengine.nethaber.network.NewsListener;
 
+import java.net.InetAddress;
 import java.util.ArrayList;
 
 public class LoginActivity extends AppCompatActivity {
@@ -76,5 +79,7 @@ public class LoginActivity extends AppCompatActivity {
         }
 
     };
+
+
 
 }
