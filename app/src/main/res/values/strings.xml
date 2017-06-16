@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">NetHaber</string>
+    <string name="title_tumhaberler">Gündem</string>
+    <string name="title_ekomomi">Ekonomi</string>
+    <string name="title_dunya">Dünya</string>
+    <string name="title_spor">Spor</string>
+    <string name="title_magazin">Magazin</string>
+    <string name="title_siyaset">Siyaset</string>
+    <string name="title_astroloji">Astoloji</string>
+    <string name="title_saglik">Sağlık</string>
+    <string name="title_yasam">Yaşam</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
