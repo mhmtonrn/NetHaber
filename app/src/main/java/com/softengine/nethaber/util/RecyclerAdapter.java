@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,9 +63,17 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(newsModelList.get(position).getLink()));
-                context.startActivity(browserIntent);
-            }
+                try {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(newsModelList.get(position).getLink()));
+                    browserIntent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY|Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+                    browserIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+                    context.startActivity(browserIntent);
+                }catch (Exception e){
+                    e.printStackTrace();
+
+                }
+                }
+
         });
 
 

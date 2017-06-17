@@ -13,6 +13,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.crashlytics.android.Crashlytics;
+import io.fabric.sdk.android.Fabric;
 import java.net.InetAddress;
 
 public class SplashActivity extends AppCompatActivity {
@@ -23,6 +25,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_splash);
         layout= (LinearLayout) findViewById(R.id.splashLayout);
 
